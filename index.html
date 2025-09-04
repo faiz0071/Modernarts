@@ -5,236 +5,275 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Modern Interiors and Arts</title>
   <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
-    body{line-height:1.6;background:#fff;color:#333;}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-    /* Navbar */
-    header{background:#004d40;color:#fff;padding:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
-    header h1{font-size:24px;}
-    nav ul{list-style:none;display:flex;flex-wrap:wrap;}
-    nav ul li{margin:0 15px;}
-    nav ul li a{color:#fff;text-decoration:none;font-weight:bold;}
+    body {
+      line-height: 1.6;
+    }
 
-    /* Hero */
-    .hero{background:url('images/hero-bg.jpg') no-repeat center center/cover;height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;color:white;padding:0 10px;}
-    .hero h2{font-size:50px;text-shadow:2px 2px 8px rgba(0,0,0,0.7);}
-    .hero p{font-size:20px;margin-top:15px;text-shadow:1px 1px 6px rgba(0,0,0,0.6);}
-    .btn{background:#ff9800;color:white;padding:12px 25px;margin-top:20px;display:inline-block;border:none;border-radius:5px;text-decoration:none;font-weight:bold;transition:0.3s;}
-    .btn:hover{background:#e68900;}
+    header {
+      background: #333;
+      color: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-    /* Get Estimate */
-    .estimate{background:#f8f9fa;padding:60px 20px;text-align:center;}
-    .estimate h2{font-size:32px;margin-bottom:20px;color:#222;}
-    .estimate p{margin-bottom:20px;font-size:18px;color:#555;}
+    header h1 {
+      font-size: 28px;
+    }
 
-    /* Services */
-    .services{padding:60px 20px;text-align:center;background:#f9f9f9;}
-    .services h2{font-size:32px;margin-bottom:15px;color:#222;}
-    .services p{max-width:800px;margin:0 auto 40px;color:#555;}
-    .service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:30px;justify-items:center;}
-    .service-item{text-align:center;}
-    .service-item img{width:60px;height:60px;margin-bottom:10px;filter:invert(44%) sepia(92%) saturate(2897%) hue-rotate(2deg) brightness(99%) contrast(104%);}
-    .service-item h3{font-size:16px;color:#333;margin-top:8px;}
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
 
-    /* Why Choose Us */
-    .choose{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:60px 20px;align-items:center;}
-    .choose .left{background:#004d40;color:white;padding:40px;border-radius:10px;}
-    .choose .left h2{margin-bottom:20px;}
-    .choose .left ul{margin:20px 0;list-style:none;}
-    .choose .left ul li{margin-bottom:10px;}
-    .choose .right{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
-    .choose .right .box{border:1px solid #ddd;padding:20px;border-radius:10px;background:white;transition:0.3s;}
-    .choose .right .box:hover{box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+    nav ul li {
+      margin-left: 20px;
+    }
 
-    /* Testimonials */
-    .testimonials {background:#fafafa;padding:60px 20px;text-align:center;}
-    .testimonials h2 {font-size:32px;margin-bottom:40px;font-weight:bold;color:#333;}
-    .testimonials h2 span {color:#800080;}
-    .testimonial-slider {display:flex;justify-content:center;flex-wrap:wrap;gap:25px;}
-    .testimonial-card {background:#fff;border-radius:15px;width:240px;padding:25px 20px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,0.1);transition:transform 0.3s ease, box-shadow 0.3s ease;}
-    .testimonial-card:hover {transform:translateY(-5px);box-shadow:0 6px 18px rgba(0,0,0,0.15);}
-    .testimonial-card img {width:80px;height:80px;border-radius:50%;object-fit:cover;margin-bottom:15px;}
-    .testimonial-card h3 {color:#800080;font-size:18px;margin-bottom:10px;font-weight:bold;}
-    .testimonial-card p {font-size:14px;color:#555;line-height:1.5;}
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
 
-    /* Footer */
-    footer {background:linear-gradient(135deg,#00251a,#004d40);color:white;padding:60px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;}
-    footer h3 {margin-bottom:15px;font-size:18px;border-bottom:2px solid #ff9800;display:inline-block;padding-bottom:5px;}
-    footer p {font-size:14px;line-height:1.6;color:#ddd;}
-    footer ul {list-style:none;padding:0;}
-    footer ul li {margin-bottom:10px;}
-    footer ul li a {color:#ddd;text-decoration:none;transition:0.3s;}
-    footer ul li a:hover {color:#ff9800;padding-left:5px;}
-    footer .gallery {display:grid;grid-template-columns:repeat(2,1fr);gap:8px;}
-    footer .gallery img {width:100%;height:100px;object-fit:cover;border-radius:8px;transition:transform 0.3s ease,box-shadow 0.3s ease;}
-    footer .gallery img:hover {transform:scale(1.05);box-shadow:0 4px 12px rgba(0,0,0,0.4);}
-    footer .contact-info p {display:flex;align-items:center;margin-bottom:10px;font-size:14px;}
-    footer .contact-info p i {margin-right:8px;color:#ff9800;font-size:16px;}
-    .copyright {text-align:center;background:#001a12;padding:12px;color:#bbb;font-size:13px;margin-top:-10px;}
+    .hero {
+      background: url('images/bg.jpg') no-repeat center center/cover;
+      color: #fff;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 10px;
+    }
 
-    /* Floating WhatsApp */
-    .whatsapp-btn{position:fixed;bottom:20px;right:20px;background:#25d366;color:white;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;z-index:999;box-shadow:0 4px 10px rgba(0,0,0,0.2);cursor:pointer;text-decoration:none;}
-    .whatsapp-btn:hover{background:#1ebc57;}
+    .hero h2 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
 
-    /* ---------------- RESPONSIVE FIXES ---------------- */
+    .hero p {
+      font-size: 20px;
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .service {
+      background: #f4f4f4;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .choose {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      text-align: left;
+      align-items: center;
+    }
+
+    .choose .right {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .testimonial-slider {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    .testimonial {
+      min-width: 250px;
+      background: #eee;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+    }
+
+    footer .gallery img {
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    /* ✅ Mobile Responsive Fixes */
     @media (max-width: 768px) {
-      /* Navbar */
-      header {flex-direction:column;text-align:center;}
-      nav ul {flex-direction:column;margin-top:10px;}
-      nav ul li {margin:8px 0;}
+      /* Header / Title Bar Fix */
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+      }
+
+      nav ul li {
+        margin: 6px 0;
+      }
 
       /* Hero */
-      .hero h2 {font-size:28px;}
-      .hero p {font-size:16px;}
+      .hero h2 {
+        font-size: 28px;
+      }
+      .hero p {
+        font-size: 16px;
+      }
 
       /* Services grid */
-      .service-grid {grid-template-columns:repeat(auto-fit,minmax(140px,1fr));}
+      .service-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      }
 
       /* Why Choose Us */
-      .choose {grid-template-columns:1fr;}
-      .choose .right {grid-template-columns:1fr;}
+      .choose {
+        grid-template-columns: 1fr;
+      }
+      .choose .right {
+        grid-template-columns: 1fr;
+      }
 
       /* Testimonials */
-      .testimonial-slider {flex-direction:column;align-items:center;}
+      .testimonial-slider {
+        flex-direction: column;
+        align-items: center;
+      }
 
       /* Footer */
-      footer {grid-template-columns:1fr;text-align:center;}
-      footer .gallery {grid-template-columns:repeat(2,1fr);justify-items:center;}
+      footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      footer .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+      }
     }
   </style>
-
-  <!-- AOS CSS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-
-  <!-- Navbar -->
-  <header data-aos="fade-down">
-    <h1>Modern Interiors and Arts</h1>
+  <header>
+    <h1>Modern Interiors & Arts</h1>
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#choose">Why Us</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" data-aos="fade-up">
+  <section class="hero">
     <div>
-      <h2>Creating Modern & Timeless Interiors</h2>
-      <p>Where elegance blends with everyday living</p>
+      <h2>Design Your Dream Home</h2>
+      <p>Creative and modern interiors that reflect your style.</p>
     </div>
   </section>
 
-  <!-- Get Free Estimate Section -->
-  <section class="estimate" id="estimate" data-aos="zoom-in">
-    <h2>Get Free Estimate</h2>
-    <p>Contact us today and get a free estimate for your dream home interiors.</p>
-    <a href="https://wa.me/+918830873039?text=Hi, I would like a free estimate for my home interiors." target="_blank" class="btn">Request on WhatsApp</a>
-  </section>
-
-  <!-- Services Section -->
-  <section class="services" id="services" data-aos="fade-up">
-    <h2>What We Do</h2>
-    <p>Everything at your doorstep is what we provide to our clients. From material selection, procurement, fitting to the final touch, we provide a clear solution to all your needs without compromising.</p>
-    
+  <section class="section">
+    <h2>Our Services</h2>
     <div class="service-grid">
-      <div class="service-item" data-aos="flip-left"><img src="images/modeular-kitchen.png" alt="Modular Kitchen"><h3>Modular Kitchen</h3></div>
-      <div class="service-item" data-aos="flip-left"><img src="images/storage.png" alt="Wardrobe"><h3>Storage & Wardrobe</h3></div>
-      <div class="service-item" data-aos="flip-left"><img src="images/crockery.png" alt="Crockery Unit"><h3>Crockery Unit</h3></div>
-      <div class="service-item" data-aos="flip-left"><img src="images/sofa.png" alt="Space Saving"><h3>Space Saving Furniture</h3></div>
-      <div class="service-item" data-aos="flip-left"><img src="images/tv.png" alt="TV Unit"><h3>TV Unit</h3></div>
-      <div class="service-item" data-aos="flip-left"><img src="images/desk.png" alt="Study Table"><h3>Study Table</h3></div>
-      <div class="service-item" data-aos="flip-left"><img src="images/False-Ceiling.png" alt="False Ceiling"><h3>False Ceiling</h3></div>
-      <div class="service-item" data-aos="flip-left"><img src="images/light.png" alt="Lights"><h3>Lights</h3></div>
-      <div class="service-item" data-aos="flip-left"><img src="images/wallpaper.png" alt="Wallpaper"><h3>Wallpaper</h3></div>
-      <div class="service-item" data-aos="flip-left"><img src="images/paint-brush.png" alt="Paints"><h3>Paints</h3></div>
-      <div class="service-item" data-aos="flip-left"><img src="images/Bathroom.png" alt="Bathroom"><h3>Bathroom</h3></div>
-      <div class="service-item" data-aos="flip-left"><img src="images/pray.png" alt="Prayer Unit"><h3>Pooja Unit</h3></div>
-      <div class="service-item" data-aos="flip-left"><img src="images/foyer.png" alt="Foyer"><h3>Foyer</h3></div>
-      <div class="service-item" data-aos="flip-left"><img src="images/moveabel-furniture.png" alt="Movable Furniture"><h3>Movable Furniture</h3></div>
-      <div class="service-item" data-aos="flip-left"><img src="images/Kids-Bedroom.png" alt="Kids Bedroom"><h3>Kids Bedroom</h3></div>
+      <div class="service">Interior Design</div>
+      <div class="service">Furniture Design</div>
+      <div class="service">Wall Arts</div>
+      <div class="service">Custom Projects</div>
     </div>
   </section>
 
-  <!-- Why Choose Us -->
-  <section class="choose" id="choose" data-aos="fade-right">
-    <div class="left" data-aos="fade-up">
-      <h2>Why People Choose Us</h2>
-      <ul>
-        <li>✔ Comfort and convenience</li>
-        <li>✔ Symbol of success</li>
-        <li>✔ Pleasure and indulgence</li>
-      </ul>
-      <a href="https://wa.me/+918830873039?text=Hi, I would like to schedule an appointment to discuss more on my interior plan." target="_blank" class="btn">Make An Appointment →</a>
+  <section class="section choose">
+    <div class="left">
+      <h2>Why Choose Us?</h2>
+      <p>We bring creativity and functionality together, ensuring each space is beautiful and practical.</p>
     </div>
     <div class="right">
-      <div class="box" data-aos="zoom-in"><h3>Experienced Team</h3><p>Our expert designers bring creativity & innovation.</p></div>
-      <div class="box" data-aos="zoom-in"><h3>Guaranteed Works</h3><p>We transform your space into a stunning haven.</p></div>
-      <div class="box" data-aos="zoom-in"><h3>Free Consultation</h3><p>We provide consultation without extra charges.</p></div>
-      <div class="box" data-aos="zoom-in"><h3>Reasonable Price</h3><p>Affordable packages with quality service.</p></div>
+      <div>Creative Designs</div>
+      <div>Expert Team</div>
+      <div>Quality Materials</div>
+      <div>Affordable Prices</div>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="testimonials" id="testimonials" data-aos="fade-up">
-    <h2><span>300+ </span>SATISFIED CUSTOMERS</h2>
+  <section class="section">
+    <h2>Testimonials</h2>
     <div class="testimonial-slider">
-      <div class="testimonial-card" data-aos="flip-right"><img src="images/user-286.png" alt=""><h3>Mr. Affan & Family</h3><p>Very professional interior designers. Highly recommended!</p></div>
-      <div class="testimonial-card" data-aos="flip-right"><img src="images/user-286.png" alt=""><h3>Mr. Kumar</h3><p>Truly professional organization with excellent team.</p></div>
-      <div class="testimonial-card" data-aos="flip-right"><img src="images/user-286.png" alt=""><h3>Patil Family</h3><p>Professional, process oriented and quality delivery.</p></div>
-      <div class="testimonial-card" data-aos="flip-right"><img src="images/user-286.png" alt=""><h3>Mr. Paresh Reddy</h3><p>Quality and timely project delivery, very satisfied.</p></div>
-      <div class="testimonial-card" data-aos="flip-right"><img src="images/user-286.png" alt=""><h3>Mr. Daniel</h3><p>After much research, we trusted them & they delivered!</p></div>
+      <div class="testimonial">"Amazing work! My living room looks stunning."</div>
+      <div class="testimonial">"Professional and creative team. Highly recommended."</div>
+      <div class="testimonial">"They transformed my home beautifully!"</div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer id="contact" data-aos="fade-up">
+  <footer>
     <div>
-      <h3>Modern Interiors and Arts</h3>
-      <p>Since 2020, we have been redefining the landscape of interior design with innovation and creativity.</p>
+      <h3>Contact Us</h3>
+      <p>Email: info@moderninteriors.com</p>
+      <p>Phone: +91 12345 67890</p>
     </div>
     <div>
-      <h3>Our Services</h3>
-      <ul>
-        <li>Modular Kitchen</li>
-        <li>Wardrobes</li>
-        <li>Crockery Units</li>
-        <li>Study Tables</li>
-        <li>False Ceilings</li>
-        <li>And Many More</li>
-      </ul>
+      <h3>Quick Links</h3>
+      <a href="#">Home</a><br>
+      <a href="#">Services</a><br>
+      <a href="#">About</a><br>
+      <a href="#">Contact</a>
     </div>
-    <div class="gallery" data-aos="zoom-in">
+    <div>
       <h3>Gallery</h3>
-      <img src="images/3.jpg" alt="">
-      <img src="images/13.jpg" alt="">
-      <img src="images/22.jpg" alt="">
-      <img src="images/23.jpg" alt="">
-      <img src="images/25.jpg" alt="">
-      <img src="images/26.jpg" alt="">
-      <img src="images/5-1.png" alt="">
-    </div>
-    <div data-aos="fade-left">
-      <h3>Get In Touch</h3>
-      <p>📍 Pune, India</p>
-      <p>📞 +91 8830873039</p>
-      <p>✉ info@moderninteriors.com</p>
+      <div class="gallery">
+        <img src="images/img1.jpg" alt="">
+        <img src="images/img2.jpg" alt="">
+        <img src="images/img3.jpg" alt="">
+      </div>
     </div>
   </footer>
-  <div class="copyright">© 2025 Modern Interiors and Arts | All Rights Reserved</div>
-
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/+918830873039?text=Hi, I am interested in Modern Interiors and Arts services." target="_blank" class="whatsapp-btn">💬</a>
-
-  <!-- AOS JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({duration:1000,once:true});
-  </script>
 </body>
 </html>
